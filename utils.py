@@ -23,18 +23,20 @@ def react_to_keys(years_vector, temperatures_vector,
     canvas.canvas.mpl_connect('key_press_event', partial_on_key_pressed)
     plt.show()
 
-def line_plot(x_vector, y_vector, x_label, y_label, x_min, x_max, color):
+def line_plot(x_vector, y_vector, x_label, y_label, x_min, x_max, y_min, y_max, color):
     plt.xlabel(x_label)
     plt.ylabel(y_label)
     plt.xlim(x_min,x_max)
+    plt.ylim(y_min,y_max)
     plt.plot(x_vector, y_vector, color=color)
     plt.show()
 
 
-def scatter_plot(x_vector, y_vector, x_label, y_label, x_min, x_max, color):
+def scatter_plot(x_vector, y_vector, x_label, y_label, x_min, x_max, y_min, y_max, color):
     plt.xlabel(x_label)
     plt.ylabel(y_label)
     plt.xlim(x_min,x_max)
+    plt.ylim(y_min,y_max)
     plt.scatter(x_vector, y_vector, color=color)
     plt.show()
 
