@@ -32,6 +32,10 @@ def set_graph(x_label, y_label, x_min, x_max, y_min, y_max):
 def view_curve(x_vector, y_vector, color):
     plt.plot(x_vector, y_vector, color=color)
 
+def view_polynomial(a3, a2, a1, a0, color):
+    plt.plot(x_vector, y_vector, color=color)
+
+
 def view_scatter(x_vector, y_vector, color):
     plt.scatter(x_vector, y_vector, color=color)
 
