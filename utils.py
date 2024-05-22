@@ -23,20 +23,14 @@ def react_to_keys(years_vector, temperatures_vector,
     canvas.canvas.mpl_connect('key_press_event', partial_on_key_pressed)
     plt.show()
 
-def create_canvas():
-    plt.figure(figsize=(10, 6))
-
-def show_canvas():
-    plt.show()
-
-def add_curve_to_canvas(x_vector, y_vector, x_label, y_label, x_min, x_max, y_min, y_max, color):
+def view_curve(x_vector, y_vector, x_label, y_label, x_min, x_max, y_min, y_max, color):
     plt.xlabel(x_label)
     plt.ylabel(y_label)
     plt.xlim(x_min,x_max)
     plt.ylim(y_min,y_max)
     plt.plot(x_vector, y_vector, color=color)
 
-def add_scatter_to_canvas(x_vector, y_vector, x_label, y_label, x_min, x_max, y_min, y_max, color):
+def view_scatter(x_vector, y_vector, x_label, y_label, x_min, x_max, y_min, y_max, color):
     plt.xlabel(x_label)
     plt.ylabel(y_label)
     plt.xlim(x_min,x_max)
