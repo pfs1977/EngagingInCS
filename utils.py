@@ -36,8 +36,8 @@ def view_curve(x_vector, y_vector, color):
     plt.plot(x_vector, y_vector, color=color)
 
 def view_polynomial(a3, a2, a1, a0, color):
-    x_vector = utils.create_vector_with_sequence(max=x_max_global)
-    y_vector = utils.create_vector_with_zeroes(size=x_max_global)
+    x_vector = create_vector_with_sequence(max=x_max_global)
+    y_vector = create_vector_with_zeroes(size=x_max_global)
     for x in x_vector:
         y_vector[x] = a0 + a1 * x + a2 * x ** 2 + a3 * x ** 3
     plt.plot(x_vector, y_vector, color=color)
