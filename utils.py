@@ -5,7 +5,7 @@ import pandas
 
 canvas = None
 canvas_aux = None
-
+x_max_global = 0
 
 def create_partial_function(handler, **kwargs):
     return partial(handler, **kwargs)
@@ -24,6 +24,9 @@ def react_to_keys(years_vector, temperatures_vector,
     plt.show()
 
 def set_graph(x_label, y_label, x_min, x_max, y_min, y_max):
+    global x_max_global, x_min_global
+    x_max_global = x_max
+    x_min_global = x_min
     plt.xlabel(x_label)
     plt.ylabel(y_label)
     plt.xlim(x_min,x_max)
@@ -32,9 +35,9 @@ def set_graph(x_label, y_label, x_min, x_max, y_min, y_max):
 def view_curve(x_vector, y_vector, color):
     plt.plot(x_vector, y_vector, color=color)
 
-def view_polynomial(a3, a2, a1, a0, year_max, color):
-    x_vector = utils.create_vector_with_sequence(max=year_max)
-    y_vector = utils.create_vector_with_zeroes(size=year_max)
+def view_polynomial(a3, a2, a1, a0, color):
+    x_vector = utils.create_vector_with_sequence(max=x_max_global)
+    y_vector = utils.create_vector_with_zeroes(size=x_max_global)
     for x in x_vector:
         y_vector[x] = a0 + a1 * x + a2 * x ** 2 + a3 * x ** 3
     plt.plot(x_vector, y_vector, color=color)
