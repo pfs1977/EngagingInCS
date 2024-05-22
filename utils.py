@@ -48,7 +48,7 @@ def scatter_plot(x_vector, y_vector, x_label, y_label, color):
     canvas, canvas_aux = plt.subplots(figsize=(10, 6))
     plt.xlabel(x_label)
     plt.ylabel(y_label)
-    plt.scatter(x_vector, y_vector, label=label, color=color)
+    plt.scatter(x_vector, y_vector, color=color)
     canvas.canvas.draw()
     plt.show()
 
