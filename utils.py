@@ -23,18 +23,6 @@ def react_to_keys(years_vector, temperatures_vector,
     canvas.canvas.mpl_connect('key_press_event', partial_on_key_pressed)
     plt.show()
 
-
-def create_drawing_canvas(x_min, x_max, y_min, y_max, x_label, y_label, fig_label):
-    global canvas, canvas_aux
-    canvas, canvas_aux = plt.subplots(figsize=(10, 6))
-    plt.xlabel(x_label)
-    plt.ylabel(y_label)
-    plt.title(fig_label)
-    plt.legend()
-    plt.ylim(y_min, y_max)
-    plt.xlim(x_min, x_max)
-
-
 def line_plot(x_vector, y_vector, x_label, y_label, color):
     plt.xlabel(x_label)
     plt.ylabel(y_label)
