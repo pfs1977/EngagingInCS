@@ -32,7 +32,11 @@ def set_graph(x_label, y_label, x_min, x_max, y_min, y_max):
 def view_curve(x_vector, y_vector, color):
     plt.plot(x_vector, y_vector, color=color)
 
-def view_polynomial(a3, a2, a1, a0, color):
+def view_polynomial(a3, a2, a1, a0, year_max, color):
+    x_vector = utils.create_vector_with_sequence(max=year_max)
+    y_vector = utils.create_vector_with_zeroes(size=year_max)
+    for x in x_vector:
+        y_vector[x] = a0 + a1 * x + a2 * x ** 2 + a3 * x ** 3
     plt.plot(x_vector, y_vector, color=color)
 
 
