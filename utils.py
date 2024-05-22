@@ -35,16 +35,20 @@ def create_drawing_canvas(x_min, x_max, y_min, y_max, x_label, y_label, fig_labe
     plt.xlim(x_min, x_max)
 
 
-def line_plot(x_vector, y_vector, label, color):
+def line_plot(x_vector, y_vector, x_label, y_label, color):
     canvas, canvas_aux = plt.subplots(figsize=(10, 6))
-    plt.plot(x_vector, y_vector, label=label, color=color)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.plot(x_vector, y_vector, color=color)
     canvas.canvas.draw()
     plt.show()
 
 
-def scatter_plot(x_vector, y_vector, label, color):
+def scatter_plot(x_vector, y_vector, x_label, y_label, color):
     canvas, canvas_aux = plt.subplots(figsize=(10, 6))
-    canvas_aux.scatter(x_vector, y_vector, label=label, color=color)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.scatter(x_vector, y_vector, label=label, color=color)
     canvas.canvas.draw()
     plt.show()
 
