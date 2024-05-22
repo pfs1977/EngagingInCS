@@ -38,7 +38,7 @@ def scatter_plot(x_vector, y_vector, x_label, y_label, x_min, x_max, y_min, y_ma
     plt.ylabel(y_label)
     plt.xlim(x_min,x_max)
     plt.ylim(y_min,y_max)
-    plt.scatter(x_vector, y_vector, color=color)
+    canvas_aux.scatter(x_vector, y_vector, color=color)
 
 def create_vector_with_zeroes(size):
     return numpy.zeros(size)
