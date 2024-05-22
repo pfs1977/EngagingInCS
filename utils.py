@@ -36,12 +36,14 @@ def create_drawing_canvas(x_min, x_max, y_min, y_max, x_label, y_label, fig_labe
 
 
 def line_plot(x_vector, y_vector, label, color):
+    canvas, canvas_aux = plt.subplots(figsize=(10, 6))
     plt.plot(x_vector, y_vector, label=label, color=color)
     canvas.canvas.draw()
     plt.show()
 
 
 def scatter_plot(x_vector, y_vector, label, color):
+    canvas, canvas_aux = plt.subplots(figsize=(10, 6))
     canvas_aux.scatter(x_vector, y_vector, label=label, color=color)
     canvas.canvas.draw()
     plt.show()
